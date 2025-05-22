@@ -30,9 +30,17 @@ compose.desktop {
         mainClass = "MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "TestProject"
+            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Exe, TargetFormat.Deb)
+            packageName = "JsonEditor"
             packageVersion = "1.0.0"
+
+            windows {
+                iconFile.set(project.file("src/main/resources/icon.ico"))
+            }
         }
     }
+
+
 }
+
+
